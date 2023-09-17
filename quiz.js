@@ -4,6 +4,27 @@ let inputs = document.querySelectorAll("input")
 
 let Labels = document.querySelectorAll("label")
 
+
+//  Timing quiz
+let time = document.getElementById("time")
+
+setInterval(() => {
+    Today();
+}, 1000)
+
+
+function Today() {
+    let today = new Date()
+    console.log(today);
+    currentTime = `${today.getHours()}: ${today.getMinutes()}:${today.getSeconds()}`
+    console.log(currentTime);
+    time.innerHTML = currentTime
+
+
+
+}
+
+
 // x = [Labels[7], Labels[4]]
 // console.log(x);
 // x.forEach(label => {
